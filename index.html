@@ -30,7 +30,8 @@
           const socket = new WebSocket(url)
           //another event listener, will listen for updates 
           socket.addEventListener('message', (ev)=>{
-              console.log(typeof ev.data)
+              console.log('type is' + typeof ev.data)
+              console.log('ev.data is ' + ev.data)
               const message = JSON.parse(ev.data)
               //if it's history, map through and put it inside ul 
               if(message.history){
